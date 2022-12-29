@@ -1,7 +1,8 @@
-import React from "react";
+import PropTypes from 'prop-types';
+
 import { FormTitle, SeacrhInput } from "./Filter.styled";
 
-export function Filter({value, onChange}) {
+export const Filter = ({value, onChange}) => {
     return (
         <FormTitle> Find contacts by name
             <SeacrhInput 
@@ -12,4 +13,9 @@ export function Filter({value, onChange}) {
             />
         </FormTitle>
     )
+};
+
+Filter.propTypes = {
+    value: PropTypes.any,
+    onChange: PropTypes.func,
 };
